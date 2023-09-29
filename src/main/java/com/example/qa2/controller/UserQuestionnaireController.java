@@ -1,7 +1,5 @@
 package com.example.qa2.controller;
 
-import com.example.qa2.entity.Questionnaire;
-import com.example.qa2.entity.User;
 import com.example.qa2.entity.UserQuestionnaire;
 import com.example.qa2.service.UserQuestionnaireService;
 import com.example.qa2.service.UserService;
