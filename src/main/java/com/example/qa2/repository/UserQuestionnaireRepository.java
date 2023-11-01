@@ -13,4 +13,5 @@ import java.util.Optional;
 @Repository
 public interface UserQuestionnaireRepository extends JpaRepository<UserQuestionnaire, Long> {
     List<UserQuestionnaire> findAllByUser(User user);
+    UserQuestionnaire findByUserAndQuestionnaire(User user, Questionnaire questionnaire);
 }

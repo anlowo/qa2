@@ -21,8 +21,8 @@ public class QuestionController {
     }
 
     @GetMapping("/id")
-    public ResponseEntity<?> getQuestionById(@PathVariable Long id, @RequestParam String questionText) {
-        Question question = questionService.updateQuestion(id, questionText);
+    public ResponseEntity<?> getQuestionById(@PathVariable Long id) {
+        Question question = questionService.readQuestion(id);
         return ResponseEntity.ok(question);
     }
 

@@ -1,5 +1,6 @@
 package com.example.qa2.service.impl;
 
+import com.example.qa2.entity.Answer;
 import com.example.qa2.entity.Questionnaire;
 import com.example.qa2.entity.User;
 import com.example.qa2.entity.UserQuestionnaire;
@@ -8,6 +9,7 @@ import com.example.qa2.repository.UserQuestionnaireRepository;
 import com.example.qa2.repository.UserRepository;
 import com.example.qa2.service.UserQuestionnaireService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -51,4 +53,10 @@ public class UserQuestionnaireImpl implements UserQuestionnaireService {
         return userQuestionnaireRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Ответ с id " + id + " не найден"));
     }
+//    @Override
+//    public UserQuestionnaire findAnswerByQuestionnaire(Long userId, Long questionnaireId) {
+//        User user = userRepository.findById(userId).orElseThrow();
+//        Questionnaire questionnaire = questionnaireRepository.findById(questionnaireId).orElseThrow();
+//        return userQuestionnaireRepository.findByUserAndQuestionnaire(user, questionnaire);
+//    }
 }

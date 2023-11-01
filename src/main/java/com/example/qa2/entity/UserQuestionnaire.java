@@ -21,5 +21,7 @@ public class UserQuestionnaire {
     @JoinColumn(name = "questionnaire_id")
     private Questionnaire questionnaire;
 
-
+    @ManyToOne
+    @JoinColumn(name = "answer_id")
+    private Answer answer;
 }
